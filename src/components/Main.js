@@ -12,6 +12,7 @@ import
 from 'reactstrap';
 
 import Home from './Home';
+import People from './People';
 	
 class Main extends Component 
 {
@@ -25,12 +26,13 @@ class Main extends Component
 	            					<Col>
 	            						<ul className="header">
 	            							<li><NavLink to="/">Home</NavLink></li>
+	            							<li><NavLink to="/people">People</NavLink></li>
 	            							
 	            						</ul>
 	            					
 	            						<div className="content">
 	            							<Route exact path="/" component={Home}/>
-	            							
+	            							<Route path="/people" component={People}/>
 	            						</div>	              		              	           	
 	            					</Col>
 	            				</Row>

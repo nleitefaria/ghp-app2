@@ -13,7 +13,9 @@ class Home extends Component {
 			      <h3>Please browse the following subjects to get more info:</h3>
 			      <br></br>			     
 			      	<div>			      		
-			      			- <NavLink to="/people">People</NavLink>		      				      		
+			      			- <NavLink to="/people">People</NavLink>
+			      			<br></br>
+			      			- <NavLink to="/planets">Planets</NavLink>
 			      	</div>					   
 			      
 			      				   

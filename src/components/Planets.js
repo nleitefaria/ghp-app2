@@ -17,9 +17,10 @@ class Planets extends Component
         		columns: [
         			{ name: 'name', title: 'Name'},
         			{ name: 'rotation_period', title: 'Rotation period' },       			
-        			{ name: 'orbital_period', title: 'Orbital Period' },
-        			{ name: 'diameter', title: 'Diameter' }
-        			
+        			{ name: 'orbital_period', title: 'Orbital period' },
+        			{ name: 'diameter', title: 'Diameter' },
+        			{ name: 'climate', title: 'Climate' },
+        			{ name: 'gravity', title: 'Gravity' }        			
         		],
         		rows: [],
         		totalCount: 0,

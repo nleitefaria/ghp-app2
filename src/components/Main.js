@@ -1,15 +1,6 @@
 import React, { Component } from 'react';
-import {
-	  Route,
-	  NavLink,
-	  HashRouter
-}
-from "react-router-dom";
-import
-{
-	  Container, Row, Col
-}
-from 'reactstrap';
+import { Route, NavLink, HashRouter } from "react-router-dom";
+import { Container, Row, Col } from 'reactstrap';
 
 import Home from './Home';
 import People from './People';

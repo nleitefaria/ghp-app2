@@ -4,12 +4,12 @@ import { PagingState, CustomPaging} from '@devexpress/dx-react-grid';
 import { Grid, Table, TableHeaderRow, PagingPanel} from '@devexpress/dx-react-grid-bootstrap4';
 import Loading from './Loading';
 
+const apiURL = 'https://swapi.co/api/';
+
 var divLoading =
 {
 	'float': 'left', 'width': '300px', 'paddingTop': '0px', 'paddingLeft': '10px'
 };
-
-const URL = 'https://swapi.co/api/species/';
 
 class Planets extends Component
 {
@@ -59,14 +59,13 @@ class Planets extends Component
 	{
 		const { currentPage } = this.state;
 		var cPage = Number(currentPage) + 1;
-		return URL + '?format=json&page=' + cPage;
+		return apiURL.concat('species/').concat('?format=json&page=').concat(cPage);
 	}
 
 	loadData()
 	{
 		const queryString = this.queryString();
 		if (queryString === this.lastQuery) {
-			//this.setState({ loading: false });
 		    return;
 		}
 

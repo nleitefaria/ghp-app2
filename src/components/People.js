@@ -4,7 +4,7 @@ import { PagingState, CustomPaging} from '@devexpress/dx-react-grid';
 import { Grid, Table, TableHeaderRow, PagingPanel} from '@devexpress/dx-react-grid-bootstrap4';
 import Loading from './Loading';
 
-const URL = 'https://swapi.co/api/people/';
+const apiURL = 'https://swapi.co/api/';
 
 var divLoading =
 {
@@ -57,14 +57,13 @@ class People extends Component
 	{
 			const { currentPage } = this.state;
 			var cPage = Number(currentPage) + 1;
-			return URL + '?format=json&page=' + cPage;
+			return apiURL.concat('people/').concat('?format=json&page=').concat(cPage);
 	}
 
 	loadData()
 	{
 		const queryString = this.queryString();
 		if (queryString === this.lastQuery) {
-			//this.setState({ loading: false });
 		    return;
 		}
 

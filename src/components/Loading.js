@@ -6,8 +6,9 @@ class Loading extends React.Component
    {
       return (
          <div>
+            <img src={require('./ajax-loader.gif')} alt="logo" className="brand-logo"/>
             <br></br>
-            Loading data. Please wait.
+            <br></br>
          </div>
       );
    }

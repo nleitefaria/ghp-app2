@@ -87,7 +87,7 @@ class Planets extends Component
 			      <div>
 			      	<Breadcrumb>
 		      			<BreadcrumbItem><a href="#/" rel="noopener noreferrer">Home</a></BreadcrumbItem>
-		      			<BreadcrumbItem active>People</BreadcrumbItem>
+		      			<BreadcrumbItem active>Planets</BreadcrumbItem>
 		      		</Breadcrumb>
 		      	  	<br></br>
 								<Row>

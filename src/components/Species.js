@@ -22,7 +22,6 @@ class Planets extends Component
         			{ name: 'name', title: 'Name'},
         			{ name: 'designation', title: 'Designation' },
         			{ name: 'average_height', title: 'Average height' },
-        			{ name: 'skin_colors', title: 'Skin colors' },
         			{ name: 'hair_colors', title: 'Hair colors' },
         			{ name: 'eye_colors', title: 'Eye colors' },
 							{ name: 'average_lifespan', title: 'Average lifespan' }

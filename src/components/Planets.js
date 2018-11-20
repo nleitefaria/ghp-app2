@@ -1,37 +1,41 @@
 import React, { Component } from 'react';
-import { Breadcrumb, BreadcrumbItem, Card } from 'reactstrap';
+import { Breadcrumb, BreadcrumbItem, Card, Row, Col } from 'reactstrap';
 import { PagingState, CustomPaging} from '@devexpress/dx-react-grid';
 import { Grid, Table, TableHeaderRow, PagingPanel} from '@devexpress/dx-react-grid-bootstrap4';
+import Loading from './Loading';
+
+var divLoading =
+{
+	'float': 'left', 'width': '300px', 'paddingTop': '0px', 'paddingLeft': '10px'
+};
 
 const URL = 'https://swapi.co/api/planets/';
 
-class Planets extends Component 
+class Planets extends Component
 {
 	constructor(props)
 	{
 		super(props);
         this.state = {
-        		//error: null,
-        		//isLoaded: false,
         		results: [],
         		columns: [
         			{ name: 'name', title: 'Name'},
-        			{ name: 'rotation_period', title: 'Rotation period' },       			
+        			{ name: 'rotation_period', title: 'Rotation period' },
         			{ name: 'orbital_period', title: 'Orbital period' },
         			{ name: 'diameter', title: 'Diameter' },
         			{ name: 'climate', title: 'Climate' },
-        			{ name: 'gravity', title: 'Gravity' }        			
+        			{ name: 'gravity', title: 'Gravity' }
         		],
         		rows: [],
         		totalCount: 0,
         		currentPage: 0,
         		loading: true,
-				modal: false
+						modal: false
         };
-               
+
         this.changeCurrentPage = this.changeCurrentPage.bind(this);
 	}
-	
+
 	componentDidMount()
 	{
 		this.loadData();
@@ -41,12 +45,12 @@ class Planets extends Component
 	{
 		this.loadData();
 	}
-	
+
 	changeCurrentPage(currentPage)
 	{
 		this.setState({
-		//loading: true,
-		currentPage: currentPage,
+			loading: true,
+			currentPage: currentPage,
 		});
 	}
 
@@ -60,8 +64,8 @@ class Planets extends Component
 	loadData()
 	{
 		const queryString = this.queryString();
-		if (queryString === this.lastQuery) {
-			//this.setState({ loading: false });
+		if (queryString === this.lastQuery)
+		{
 		    return;
 		}
 
@@ -74,21 +78,22 @@ class Planets extends Component
 		      }))
 		      .catch(() => this.setState({ loading: false }));
 		    this.lastQuery = queryString;
-	  	}
-	
-		render() 
-		{
-		
-			const { rows, columns, pageSize, currentPage, totalCount } = this.state;
-	
+	 }
+
+	render()
+	{
+			const { rows, columns, pageSize, currentPage, totalCount, loading } = this.state;
 			return (
-			      <div>	      	      	      			      	
+			      <div>
 			      	<Breadcrumb>
 		      			<BreadcrumbItem><a href="#/" rel="noopener noreferrer">Home</a></BreadcrumbItem>
 		      			<BreadcrumbItem active>People</BreadcrumbItem>
 		      		</Breadcrumb>
 		      	  	<br></br>
-			      	<Card style={{ position: 'relative' }}>
+								<Row>
+										<Col xs="6"><div style={divLoading}>{loading && <Loading />}</div></Col>
+								</Row>
+			      		<Card style={{ position: 'relative' }}>
   	        			<Grid rows={rows} columns={columns}>
   	        				<PagingState currentPage={currentPage} onCurrentPageChange={this.changeCurrentPage} pageSize={pageSize} />
   	        					<CustomPaging totalCount={totalCount} />
@@ -96,10 +101,10 @@ class Planets extends Component
   	          							<TableHeaderRow />
   	          								<PagingPanel />
   	          		</Grid>
-  	          		</Card>		   
+  	          	</Card>
 			      </div>
 			    );
-		}	 
+		}
 	}
-	 
+
 export default Planets;

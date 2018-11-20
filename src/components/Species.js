@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
-import { Breadcrumb, BreadcrumbItem, Card, Row, Col } from 'reactstrap';
+import { Breadcrumb, BreadcrumbItem, Card, Row, Col} from 'reactstrap';
 import { PagingState, CustomPaging} from '@devexpress/dx-react-grid';
 import { Grid, Table, TableHeaderRow, PagingPanel} from '@devexpress/dx-react-grid-bootstrap4';
 import Loading from './Loading';
-
-const URL = 'https://swapi.co/api/people/';
 
 var divLoading =
 {
 	'float': 'left', 'width': '300px', 'paddingTop': '0px', 'paddingLeft': '10px'
 };
 
-class People extends Component
+const URL = 'https://swapi.co/api/species/';
+
+class Planets extends Component
 {
 	constructor(props)
 	{
@@ -20,16 +20,18 @@ class People extends Component
         		results: [],
         		columns: [
         			{ name: 'name', title: 'Name'},
-        			{ name: 'height', title: 'Height' },
-        			{ name: 'mass', title: 'Mass' },
-        			{ name: 'hair_color', title: 'Hair Color' }
-
+        			{ name: 'designation', title: 'Designation' },
+        			{ name: 'average_height', title: 'Average height' },
+        			{ name: 'skin_colors', title: 'Skin colors' },
+        			{ name: 'hair_colors', title: 'Hair colors' },
+        			{ name: 'eye_colors', title: 'Eye colors' },
+							{ name: 'average_lifespan', title: 'Average lifespan' }
         		],
         		rows: [],
         		totalCount: 0,
         		currentPage: 0,
         		loading: true,
-						modal: false
+						modal: false,
         };
 
         this.changeCurrentPage = this.changeCurrentPage.bind(this);
@@ -48,16 +50,16 @@ class People extends Component
 	changeCurrentPage(currentPage)
 	{
 		this.setState({
-			loading: true,
-			currentPage: currentPage,
+		loading: true,
+		currentPage: currentPage,
 		});
 	}
 
 	queryString()
 	{
-			const { currentPage } = this.state;
-			var cPage = Number(currentPage) + 1;
-			return URL + '?format=json&page=' + cPage;
+		const { currentPage } = this.state;
+		var cPage = Number(currentPage) + 1;
+		return URL + '?format=json&page=' + cPage;
 	}
 
 	loadData()
@@ -76,17 +78,17 @@ class People extends Component
 		        loading: false,
 		      }))
 		      .catch(() => this.setState({ loading: false }));
-		    	this.lastQuery = queryString;
-	  	}
+		      this.lastQuery = queryString;
+	  }
 
 		render()
 		{
-			const { rows, columns, pageSize, currentPage, totalCount , loading } = this.state;
+			const { rows, columns, pageSize, currentPage, totalCount, loading } = this.state;
 			return (
 			      <div>
 			      	<Breadcrumb>
 		      			<BreadcrumbItem><a href="#/" rel="noopener noreferrer">Home</a></BreadcrumbItem>
-		      			<BreadcrumbItem active>People</BreadcrumbItem>
+		      			<BreadcrumbItem active>Species</BreadcrumbItem>
 		      		</Breadcrumb>
 		      	  	<br></br>
 								<Row>
@@ -106,4 +108,4 @@ class People extends Component
 		}
 	}
 
-export default People;
+export default Planets;

@@ -6,6 +6,7 @@ import Home from './Home';
 import People from './People';
 import Planets from './Planets';
 import Species from './Species';
+import Vehicles from './Vehicles';
 
 class Main extends Component
 {
@@ -22,6 +23,7 @@ class Main extends Component
 	            							<li><NavLink to="/species">Species</NavLink></li>
 	            							<li><NavLink to="/people">People</NavLink></li>
 	            							<li><NavLink to="/planets">Planets</NavLink></li>
+	            							<li><NavLink to="/vehicles">Vehicles</NavLink></li>
 											
 	            						</ul>
 	            						<div className="content">
@@ -29,6 +31,7 @@ class Main extends Component
 	            							<Route path="/species" component={Species}/>
 	            							<Route path="/people" component={People}/>
 	            							<Route path="/planets" component={Planets}/>
+	            							<Route path="/vehicles" component={Vehicles}/>
 														
 	            						</div>
 	            					</Col>

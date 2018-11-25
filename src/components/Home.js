@@ -19,6 +19,8 @@ class Home extends Component {
 			      			<br></br>
 			      			- <NavLink to="/planets">Planets</NavLink>
 			      			<br></br>
+			      			- <NavLink to="/vehicles">Vehicles</NavLink>
+			      			<br></br>
 			      			
 			      		</div>
 			      </div>

@@ -8,6 +8,7 @@ import Planets from './Planets';
 import Species from './Species';
 import Vehicles from './Vehicles';
 import Starships from './Starships';
+import Films from './Films';
 
 class Main extends Component
 {
@@ -26,6 +27,7 @@ class Main extends Component
 	            							<li><NavLink to="/planets">Planets</NavLink></li>
 	            							<li><NavLink to="/vehicles">Vehicles</NavLink></li>
 	            							<li><NavLink to="/starships">Starships</NavLink></li>
+                                            <li><NavLink to="/films">Films</NavLink></li>
 											
 	            						</ul>
 	            						<div className="content">
@@ -35,6 +37,7 @@ class Main extends Component
 	            							<Route path="/planets" component={Planets}/>
 	            							<Route path="/vehicles" component={Vehicles}/>
 	            							<Route path="/starships" component={Starships}/>
+                                            <Route path="/films" component={Films}/>
 	            						
 	            						</div>
 	            					</Col>

@@ -76,8 +76,8 @@ class Starships extends Component
 		      this.lastQuery = queryString;
 	  }
 
-		render()
-		{
+	  render()
+	  {
 			const { rows, columns, pageSize, currentPage, totalCount, loading } = this.state;
 			return (
 			      <div>

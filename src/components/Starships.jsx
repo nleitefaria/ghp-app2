@@ -83,7 +83,7 @@ class Starships extends Component
 			      <div>
 			      	<Breadcrumb>
 		      			<BreadcrumbItem><a href="#/" rel="noopener noreferrer">Home</a></BreadcrumbItem>
-		      			<BreadcrumbItem active>Vehicles</BreadcrumbItem>
+		      			<BreadcrumbItem active>Starships</BreadcrumbItem>
 		      		</Breadcrumb>
 		      	  	<br></br>
 								<Row>

@@ -83,7 +83,7 @@ class Films extends Component
 			      <div>
 			      	<Breadcrumb>
 		      			<BreadcrumbItem><a href="#/" rel="noopener noreferrer">Home</a></BreadcrumbItem>
-		      			<BreadcrumbItem active>People</BreadcrumbItem>
+		      			<BreadcrumbItem active>Films</BreadcrumbItem>
 		      		</Breadcrumb>
 		      	  	<br></br>
 								<Row>

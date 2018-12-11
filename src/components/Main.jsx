@@ -5,7 +5,7 @@ import { Container, Row, Col } from 'reactstrap';
 import Home from './Home';
 import People from './People';
 import Planets from './Planets';
-import Species from './Species';
+import Species from './species/Species';
 import Vehicles from './Vehicles';
 import Starships from './Starships';
 import Films from './Films';

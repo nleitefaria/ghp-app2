@@ -5,7 +5,7 @@ import SpeciesContent from './SpeciesContent';
 const apiURL = 'https://swapi.co/api/';
 
 
-class Planets extends Component
+class Species extends Component
 {
 	constructor(props)
 	{
@@ -18,8 +18,8 @@ class Planets extends Component
         			{ name: 'average_height', title: 'Average height' },
         			{ name: 'hair_colors', title: 'Hair colors' },
         			{ name: 'eye_colors', title: 'Eye colors' },
-					{ name: 'average_lifespan', title: 'Average lifespan' },
-					{ name: 'action', title: ' '}
+					{ name: 'average_lifespan', title: 'Average lifespan' },					
+		            { name: "action", title: "Action" }
         		],
         		rows: [],
         		totalCount: 0,
@@ -86,4 +86,4 @@ class Planets extends Component
 		}
 	}
 
-export default Planets;
+export default Species;

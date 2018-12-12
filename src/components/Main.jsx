@@ -3,7 +3,7 @@ import { Route, NavLink, HashRouter } from "react-router-dom";
 import { Container, Row, Col } from 'reactstrap';
 
 import Home from './Home';
-import People from './People';
+import People from './people/People';
 import Planets from './Planets';
 import Species from './species/Species';
 import Vehicles from './Vehicles';

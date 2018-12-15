@@ -61,8 +61,32 @@ class SpeciesDetails extends Component
                               <tr>
                                 <td><b>Average height: </b></td>
                                 <td> {result.average_height}</td>                         
-                              </tr>                                                              
-                        </table>                
+                              </tr>
+                              <tr>
+                                  <td><b>Skin colors: </b></td>
+                                  <td> {result.skin_colors}</td>
+                              </tr>
+                              <tr>
+                                  <td><b>Hair colors: </b></td>
+                                  <td> {result.hair_colors}</td>
+                              </tr>
+                              <tr>
+                                  <td><b>Eye_colors: </b></td>
+                                  <td> {result.eye_colors}</td>
+                              </tr>
+                              <tr>
+                                  <td><b>Average lifespan: </b></td>
+                                  <td> {result.average_lifespan}</td>
+                              </tr>
+                              <tr>
+                                  <td><b>Homeworld: </b></td>
+                                  <td> {result.homeworld}</td>
+                              </tr>
+                              <tr>
+                                  <td><b>Language: </b></td>
+                                  <td> {result.language}</td>
+                              </tr>
+                          </table>
                       </div>
                     ))
                   }))

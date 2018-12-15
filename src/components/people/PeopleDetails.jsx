@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
-class SpeciesDetails extends Component
+
+class PeopleDetails extends Component
 {
     constructor(props)
     {
@@ -51,40 +53,24 @@ class SpeciesDetails extends Component
                                 <td> {result.name}</td>
                             </tr>
                             <tr>
-                                <td><b>Classification: </b></td>
-                                <td> {result.classification}</td>
+                                <td><b>Height: </b></td>
+                                <td> {result.height}</td>
                             </tr>
                             <tr>
-                                <td><b>Designation: </b></td>
-                                <td> {result.designation}</td>
+                                <td><b>Mass: </b></td>
+                                <td> {result.mass}</td>
                             </tr>
                             <tr>
-                                <td><b>Average height: </b></td>
-                                <td> {result.average_height}</td>
+                                <td><b>Skin color: </b></td>
+                                <td> {result.skin_color}</td>
                             </tr>
                             <tr>
-                                <td><b>Skin colors: </b></td>
-                                <td> {result.skin_colors}</td>
+                                <td><b>Hair color: </b></td>
+                                <td> {result.hair_color}</td>
                             </tr>
                             <tr>
-                                <td><b>Hair colors: </b></td>
-                                <td> {result.hair_colors}</td>
-                            </tr>
-                            <tr>
-                                <td><b>Eye_colors: </b></td>
-                                <td> {result.eye_colors}</td>
-                            </tr>
-                            <tr>
-                                <td><b>Average lifespan: </b></td>
-                                <td> {result.average_lifespan}</td>
-                            </tr>
-                            <tr>
-                                <td><b>Homeworld: </b></td>
-                                <td> {result.homeworld}</td>
-                            </tr>
-                            <tr>
-                                <td><b>Language: </b></td>
-                                <td> {result.language}</td>
+                                <td><b>Eye color: </b></td>
+                                <td> {result.eye_color}</td>
                             </tr>
                         </table>
                     </div>
@@ -96,13 +82,13 @@ class SpeciesDetails extends Component
 
     queryString(id)
     {
-        return 'https://swapi.co/api/species/?search=' + id;
+        return 'https://swapi.co/api/people/?search=' + id;
     }
 
     render()
-    {
-        return (
-            <div>
+	{
+		return (
+			<div>
                 <Button color="primary" size="sm" onClick={this.toggle}>Details</Button>
                 <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className} size="lg">
                     <ModalHeader toggle={this.toggle}><b>{this.props.id}'s details</b></ModalHeader>
@@ -117,9 +103,9 @@ class SpeciesDetails extends Component
                         <Button color="secondary" onClick={this.toggle}>Close</Button>
                     </ModalFooter>
                 </Modal>
-            </div>
-        );
-    }
+			</div>
+		);
+	}
 }
 
-export default SpeciesDetails;
+export default PeopleDetails;

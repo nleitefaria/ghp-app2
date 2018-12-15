@@ -15,8 +15,8 @@ class People extends Component
         			{ name: 'name', title: 'Name'},
         			{ name: 'height', title: 'Height' },
         			{ name: 'mass', title: 'Mass' },
-        			{ name: 'hair_color', title: 'Hair Color' }
-
+        			{ name: 'hair_color', title: 'Hair Color' },
+                    { name: "action", title: "Action" }
         		],
         		rows: [],
         		totalCount: 0,

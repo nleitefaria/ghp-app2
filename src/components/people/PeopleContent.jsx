@@ -37,7 +37,6 @@ class People extends Component
                     {
                         (context)=>
                             <React.Fragment>
-                            <br></br>
 								<Breadcrumb>
 		      						<BreadcrumbItem><a href="#/" rel="noopener noreferrer">Home</a></BreadcrumbItem>
 		      						<BreadcrumbItem active>People</BreadcrumbItem>

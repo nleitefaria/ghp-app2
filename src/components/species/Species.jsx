@@ -4,7 +4,6 @@ import SpeciesContent from './SpeciesContent';
 
 const apiURL = 'https://swapi.co/api/';
 
-
 class Species extends Component
 {
 	constructor(props)

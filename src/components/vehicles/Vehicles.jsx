@@ -1,15 +1,8 @@
 import React, { Component } from 'react';
-import { Breadcrumb, BreadcrumbItem, Card, Row, Col} from 'reactstrap';
-import { PagingState, CustomPaging} from '@devexpress/dx-react-grid';
-import { Grid, Table, TableHeaderRow, PagingPanel} from '@devexpress/dx-react-grid-bootstrap4';
-import Loading from './Loading';
+import { VehiclesProvider } from "../../context/VehiclesContext";
+import VehiclesContent from './VehiclesContent';
 
 const apiURL = 'https://swapi.co/api/';
-
-var divLoading =
-{
-	'float': 'left', 'width': '300px', 'paddingTop': '0px', 'paddingLeft': '10px'
-};
 
 class Vehicles extends Component
 {
@@ -78,26 +71,11 @@ class Vehicles extends Component
 
 		render()
 		{
-			const { rows, columns, pageSize, currentPage, totalCount, loading } = this.state;
 			return (
 			      <div>
-			      	<Breadcrumb>
-		      			<BreadcrumbItem><a href="#/" rel="noopener noreferrer">Home</a></BreadcrumbItem>
-		      			<BreadcrumbItem active>Vehicles</BreadcrumbItem>
-		      		</Breadcrumb>
-		      	  	<br></br>
-								<Row>
-                    <Col xs="6"><div style={divLoading}>{loading && <Loading />}</div></Col>
-                </Row>
-			      	<Card style={{ position: 'relative' }}>
-  	        			<Grid rows={rows} columns={columns}>
-  	        				<PagingState currentPage={currentPage} onCurrentPageChange={this.changeCurrentPage} pageSize={pageSize} />
-  	        					<CustomPaging totalCount={totalCount} />
-  	          						<Table/>
-  	          							<TableHeaderRow />
-  	          								<PagingPanel />
-  	          		</Grid>
-  	          		</Card>
+			        <VehiclesProvider value={{state:this.state, changeCurrentPage: this.changeCurrentPage}} >          
+                        <VehiclesContent />
+			        </VehiclesProvider>			      	
 			      </div>
 			    );
 		}

@@ -6,7 +6,7 @@ import Home from './Home';
 import People from './people/People';
 import Planets from './planets/Planets';
 import Species from './species/Species';
-import Vehicles from './Vehicles';
+import Vehicles from './vehicles/Vehicles';
 import Starships from './Starships';
 import Films from './Films';
 

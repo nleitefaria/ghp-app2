@@ -7,7 +7,7 @@ import People from './people/People';
 import Planets from './planets/Planets';
 import Species from './species/Species';
 import Vehicles from './vehicles/Vehicles';
-import Starships from './Starships';
+import Starships from './starships/Starships';
 import Films from './Films';
 
 class Main extends Component

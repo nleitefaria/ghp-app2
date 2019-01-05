@@ -8,7 +8,7 @@ import Planets from './planets/Planets';
 import Species from './species/Species';
 import Vehicles from './vehicles/Vehicles';
 import Starships from './starships/Starships';
-import Films from './Films';
+import Films from './films/Films';
 
 class Main extends Component
 {

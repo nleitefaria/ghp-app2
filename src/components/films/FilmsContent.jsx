@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StarshipsConsumer } from "../../context/StarshipsContext";
+import { FilmsConsumer } from "../../context/FilmsContext";
 
 import { Breadcrumb, BreadcrumbItem, Card, Row, Col} from 'reactstrap';
 import { PagingState, CustomPaging} from '@devexpress/dx-react-grid';
@@ -12,19 +12,19 @@ var divLoading =
 };
 
 
-class StarshipsContent extends Component
+class FilmsContent extends Component
 {
 	render()
 	{			
 			return (
 			      <div>
-			        <StarshipsConsumer>
+			        <FilmsConsumer>
 			        {
 			            (context)=>
 		                    <React.Fragment>
 			            <Breadcrumb>
                         <BreadcrumbItem><a href="#/" rel="noopener noreferrer">Home</a></BreadcrumbItem>
-                        <BreadcrumbItem active>Starships</BreadcrumbItem>
+                        <BreadcrumbItem active>Films</BreadcrumbItem>
                     </Breadcrumb>
                     <br></br>
                                 <Row>
@@ -41,10 +41,10 @@ class StarshipsContent extends Component
                     </Card>              
 	                      </React.Fragment>
 	                }
-			        </StarshipsConsumer>
+			        </FilmsConsumer>
 			      </div>
 			    );
 		}
 	}
 
-export default StarshipsContent;
+export default FilmsContent;

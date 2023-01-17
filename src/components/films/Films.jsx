@@ -3,7 +3,7 @@ import { FilmsProvider } from "../../context/FilmsContext";
 import FilmsContent from './FilmsContent';
 
 
-const apiURL = 'https://swapi.co/api/';
+const apiURL = 'https://swapi.dev/api/';
 
 class Films extends Component
 {

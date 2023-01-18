@@ -1,7 +1,7 @@
 {
   "name": "ghp-app2",
   "version": "0.1.0",
-  "homepage": "https://nleitefaria.github.io/ghp-app2/",
+  "homepage": "https://nleitefaria.github.io/ghp-app2",
   "dependencies": {
     "@devexpress/dx-react-core": "^1.2.0",
     "@devexpress/dx-react-grid": "^1.2.0",
